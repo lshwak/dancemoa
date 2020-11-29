@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+table {
+          width:900;
+          border-collapse:collapse;
+          margin:0px auto;
+}
+
+#a{
+		padding-top : 50px;
+		padding-bottom : 50px;
+          text-align:center;
+}
+
+img{
+    height: 150px;
+    width : 100px;
+}
+
+.textcontent {
+	width : 800px;
+}
+
+.line {
+          border-top:1px solid black;
+ }
+
+.row {
+          padding : 0px 0px 10px 0px;
+ }
+
+td{
+          padding:10px;
+ }
+
+.regist-area {
+	float : right;
+}
+
+
+

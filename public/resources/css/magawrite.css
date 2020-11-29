@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+
+
+
+img{
+	width:300px;
+}
+
+table {
+		width:900;
+        border-collapse:collapse;
+        margin:0px auto;
+}
+.linetop {
+          border-top:2px solid black;
+          border-bottom:1px solid black;
+}
+.linebottom {
+		border-top:2px solid black;
+}
+ .line {
+          border-bottom:1px solid black;
+ }
+ td{
+          padding:7px;
+ }
+ 
+ #a{
+		padding-top : 50px;
+		padding-bottom : 50px;
+          text-align:center;
+}
+
+h1{
+		
+          text-align:center;
+}
+.modclass {
+	float : right;
+}
+
+.btn-primary {
+	margin : 0px 0px 0px 10px;
+}

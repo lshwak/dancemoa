@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+
+#a{
+          text-align:center;
+          font-size:50px;
+		padding-top : 50px;
+		padding-bottom : 50px;
+}
+
+.btn-primary {
+	margin : 0px 0px 0px 10px;
+}
+
+.input-group {
+	margin-bottom : 20px;
+}
+
+.regist-area {
+	float : right;
+}
+.row {
+          
+          padding : 0px 0px 10px 0px;
+ }
+ 
+img {
+	height:300px;
+}
+.pagingbox {
+	float : center;
+	margin : 0px 0px 0px 500px;
+}

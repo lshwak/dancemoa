@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+.middle {
+	height : 750px;
+	width : 750px;
+	margin : 0px auto;
+
+}
+
+#log_box {
+	border : 1px solid black;
+	border-radius : 10px;
+	padding : 100px;
+	text-align:center;
+	margin-top : 50px;
+}
+
+#a{
+          text-align:center;
+          font-size:50px;
+		padding-top : 50px;
+}
+
+input {
+	margin : 7px;
+}

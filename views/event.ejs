@@ -1,0 +1,116 @@
+<% layout('layout') %>
+
+<form id="eventForm" method="get">
+
+    <!-- Page Content -->
+    <div class="container">
+  
+      <h1 id="a">Event</h1>
+  
+     <div class="row">
+     <div class="col-md-8">
+         <div class="input-group">
+          <input type="hidden" name="pageNum" value="${page.cri.getPageNum()}">
+          <input type="hidden" name="amount" value="${page.cri.getAmount()}">
+          
+          <input type="text" name="keyword" class="search" aria-label="Search" aria-describedby="basic-addon2">
+          <div class="input-group-append">
+              <input type="submit" value="검색" id="search" class="btn-primary">
+          </div>
+      </div>
+      </div>
+      <div class="col-md-4">	
+          <div class="regist-area">
+              <!-- <input type="submit" value="등록" id="regist" class="btn-regist"> -->
+              <a href="/event/write" class="btn-regist">등록</a>
+          </div>
+      </div>
+     </div>
+  
+      <div class="row">
+      <!-- Search Box -->
+      
+      
+      
+      <% rows.forEach((list, index) => { %>
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+            <div class="card h-100">
+            
+                    <a href="detail?eno=${boards.eno}"><img class="card-img-top" src="displayFile?fileName=${boards.fn}"></a>
+                
+                    <a href="detail?eno=${boards.eno}"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                
+              <div class="card-body">
+                <h4 class="card-title">
+                  <a href="detail?eno=${boards.eno}"><%= list.title %></a>
+                </h4>
+                <p class="card-text">일시:  <br> 타입:  <br>Views: </p>
+              </div>
+            </div>
+          </div>
+      <% }) %>
+        
+        
+        
+        
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+            <div class="card h-100">
+            <!-- <c:choose>
+                <c:when test="${boards.fn ne null && boards.fn ne '' }"> -->
+                    <a href="detail?eno=${boards.eno}"><img class="card-img-top" src="displayFile?fileName=${boards.fn}"></a>
+                <!-- </c:when>
+                <c:otherwise> -->
+                    <a href="detail?eno=${boards.eno}"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                <!-- </c:otherwise> -->
+            <!-- </c:choose> -->
+              <div class="card-body">
+                <h4 class="card-title">
+                  <a href="detail?eno=${boards.eno}">${boards.esubject}</a>
+                </h4>
+                <p class="card-text">일시: ${boards.edate} <br> 타입: ${boards.etype} <br>Views: ${boards.ecnt}</p>
+              </div>
+            </div>
+          </div><div class="col-lg-4 col-sm-6 portfolio-item">
+            <div class="card h-100">
+            <!-- <c:choose>
+                <c:when test="${boards.fn ne null && boards.fn ne '' }"> -->
+                    <a href="detail?eno=${boards.eno}"><img class="card-img-top" src="displayFile?fileName=${boards.fn}"></a>
+                <!-- </c:when>
+                <c:otherwise> -->
+                    <a href="detail?eno=${boards.eno}"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                <!-- </c:otherwise> -->
+            <!-- </c:choose> -->
+              <div class="card-body">
+                <h4 class="card-title">
+                  <a href="detail?eno=${boards.eno}">${boards.esubject}</a>
+                </h4>
+                <p class="card-text">일시: ${boards.edate} <br> 타입: ${boards.etype} <br>Views: ${boards.ecnt}</p>
+              </div>
+            </div>
+          </div>
+        
+        
+        
+        </div>
+        <div class="pagingbox">
+            <table>
+                <tr>
+                    <td>
+                        <c:if test="${page.prev}">
+                            <a href="event?pageNum=${page.startPage - 1}&amount=${page.cri.amount}&keyword=${page.cri.keyword}">이전</a>
+                        </c:if>
+                        
+                        <c:forEach var="num" begin="${page.startPage}" end="${page.endPage}">
+                            <a href="event?pageNum=${num}&amount=${page.cri.amount}&keyword=${page.cri.keyword}">${num}</a>
+                        </c:forEach>
+                        
+                        <c:if test="${page.next}">
+                            <a href="event?pageNum=${page.endPage + 1}&amount=${page.cri.amount}&keyword=${page.cri.keyword}">다음</a>
+                        </c:if>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+        
+  </form>
