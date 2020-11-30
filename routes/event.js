@@ -4,7 +4,7 @@ const db = require('./db');
 
 /* GET users listing. */
 router.get('/', function(req, res) {
-  db.query('SELECT * FROM new_table', (err, rows) => {
+  db.query('SELECT * FROM event_table', (err, rows) => {
     if(err) console.log(err);
     res.render('event', {rows});
   }) 
